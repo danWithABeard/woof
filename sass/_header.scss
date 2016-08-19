@@ -4,6 +4,7 @@
 
 body {
 	font-family: $apercu-regular;
+	min-width: 320px;
 }
 
 .barkconcierge__header {
@@ -12,11 +13,12 @@ body {
 	display: flex;
 	height: 120px;
 	justify-content: center;
-	padding: 0 60px;
+	padding: 0 30px;
 	width: 100%;
 
 	@media screen and (min-width: 768px) {
 		height: 120px;
+		padding: 0 60px;
 	}
 
 	img {
@@ -36,6 +38,7 @@ h2 {
 	@media screen and (min-width: 768px) {
 		color: $black;
 		font-size: 38px;
+		margin-top: 65px;
 	}
 }
 
@@ -51,12 +54,14 @@ h3 {
 
 p {
   font-size: 35px;
-  margin: 25px 0 30px;
+  margin: 25px auto 30px;
+  max-width: 500px;
 
 	@media screen and (min-width:768px) {
 		font-size: 20px;
 	  letter-spacing: 2px;
-	  margin: 5px 0 25px;
+	  margin: 5px auto 25px;
+	  max-width: none;
   }
 }
 
@@ -67,6 +72,8 @@ p {
 }
 
 .header__questions {
+	font-family: $burbank-bold;
+
 	&:before {
 		content: '';
 	}
@@ -75,6 +82,7 @@ p {
     color: $blue;
     font-size: 40px;
     margin: 0 auto 30px;
+    min-width: 454px;
     position: relative;
     width: 42%;
 
@@ -100,9 +108,16 @@ p {
 	width: 100%;
 }
 
+.barkconcierge__chat_wrapper {
+	@media screen and (min-width: 768px) {
+		margin-bottom: 160px;
+	}
+}
+
 .barkconcierge__chat-history {
   margin: 0 auto;
-  max-width: 292px;
+  max-width: 286px;
+  padding-right: 20px;
 	width: 100%;
 }
 
@@ -113,7 +128,7 @@ p {
 		background: $white;
 	  border: 3px solid $black;
     display: inline-block;
-    height: 368px;
+    height: 349px;
 	  width: 293px;
 	}
 }

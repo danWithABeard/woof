@@ -4,15 +4,58 @@
     <meta charset="UTF-8">
     <title>BarkConcierge</title>
     <link href="css/barkconcierge.css" rel="stylesheet" />
-    <!--Start of Zopim Live Chat Script-->
-<script type="text/javascript">
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-$.src="//v2.zopim.com/?49OyeapsIXr0U8QK0F5f10d8xcHL5mJv";z.t=+new Date;$.
-type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-</script>
-<!--End of Zopim Live Chat Script-->
+    <script type="text/javascript">
+      window.$zopim||(function(d,s) { var z = $zopim = function(c) {z._.push(c)},$=z.s=
+      d.createElement(s),e=d.getElementsByTagName(s)[0]; z.set=function(o){z.set.
+      _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+      $.src="//v2.zopim.com/?31hwtwabcV8aIaGpPCG4YPfC8ycOymAn";z.t=+new Date;$.
+      type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+
+      $zopim( function() {
+        $zopim.livechat.departments.filter('BarkShop');
+        $zopim.livechat.departments.setVisitorDepartment('BarkShop');
+        $zopim.livechat.setDisableSound(true);
+
+        function check(status) {
+          var dep = $zopim.livechat.departments.getDepartment('BarkShop');
+
+          if ((typeof dep === 'undefined') || (dep.status === status)) {
+            return
+          } else if (dep.status === 'offline') {
+            $zopim.livechat.setStatus('offline');
+            if (!$zopim.livechat.isChatting()) {
+              $zopim.livechat.hideAll();
+            }
+          } else if (dep.status === 'online') {
+            $zopim.livechat.setStatus('online');
+            if ($zopim.livechat.isChatting() && $.cookie('zopimOpen') == 'true' ) {
+              $zopim.livechat.window.show();
+            } else {
+              $zopim.livechat.window.hide();
+            }
+          }
+
+          $zopim.livechat.window.setPosition('br');
+        }
+
+        $zopim.livechat.window.onShow( function() {
+          $.cookie('zopimOpen', 'true', { path: '/' });
+        });
+
+        $zopim.livechat.window.onHide(function() {
+          $.cookie('zopimOpen', 'false', { path: '/' });
+        });
+
+        $zopim.livechat.setOnChatStart(function() {
+          if (window.current_user) {
+            $zopim.livechat.setEmail(window.current_user.email);
+          }
+        });
+
+        $zopim.livechat.setOnStatus(check);
+        $zopim.livechat.setOnConnected(check);
+      });
+    </script>
   </head>
   <body>
     <div class="barkconcierge__header">
@@ -25,11 +68,13 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
       <h3 class="desktop--hidden">Text <span>Dognoggin</span></h3>
 
       <div class="button button--gray">
+        <a class="button--gray__link" href="tel:18444847787" title="Call BarkConcierge"></a>
         <img class="cta__dog-illustrations" src="img/text_pup.png" alt="text pup" />
-        <span>text PUP to </span>(844) 484-7787
+        <span>text PUP<br/> to </span>(844) 484-7787
       </div>
 
       <div class="button button--blue">
+        <a class="button--blue__link" href="javascript:void($zopim.livechat.window.openPopout())" title="Chat with BarkConcierge"></a>
         <img class="cta__dog-illustrations" src="img/chat_pup.png" alt="chat pup" />
         <span>online</span>
       </div>
@@ -37,8 +82,10 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
       <div class="barkconcierge__section-divider desktop--hidden"></div>
 
       <h3 class="header__questions">We're here for all your tough puppy questions!</h3>
-      <img class="barkconcierge__chat-history" src="img/conversation_v1.png" alt="BarkConcierge Chat History" />
-      <div class="barkconcierge__chat"></div>
+      <div class="barkconcierge__chat_wrapper">
+        <img class="barkconcierge__chat-history" src="img/conversation_v1.png" alt="BarkConcierge Chat History" />
+        <div class="barkconcierge__chat"></div>
+      </div>
     </div>
 
     <div class="barkconcierge__footer">

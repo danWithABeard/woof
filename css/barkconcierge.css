@@ -69,7 +69,8 @@ table {
   box-sizing: border-box; }
 
 body {
-  font-family: "apercu-regular", sans-serif; }
+  font-family: "apercu-regular", sans-serif;
+  min-width: 320px; }
 
 .barkconcierge__header {
   align-items: center;
@@ -77,11 +78,12 @@ body {
   display: flex;
   height: 120px;
   justify-content: center;
-  padding: 0 60px;
+  padding: 0 30px;
   width: 100%; }
   @media screen and (min-width: 768px) {
     .barkconcierge__header {
-      height: 120px; } }
+      height: 120px;
+      padding: 0 60px; } }
   .barkconcierge__header img {
     width: 100%;
     max-width: 600px; }
@@ -94,7 +96,8 @@ h2 {
   @media screen and (min-width: 768px) {
     h2 {
       color: #000000;
-      font-size: 38px; } }
+      font-size: 38px;
+      margin-top: 65px; } }
 
 h3 {
   font-family: "apercu-medium", sans-serif;
@@ -105,36 +108,40 @@ h3 {
 
 p {
   font-size: 35px;
-  margin: 25px 0 30px; }
+  margin: 25px auto 30px;
+  max-width: 500px; }
   @media screen and (min-width: 768px) {
     p {
       font-size: 20px;
       letter-spacing: 2px;
-      margin: 5px 0 25px; } }
+      margin: 5px auto 25px;
+      max-width: none; } }
 
 @media screen and (min-width: 768px) {
   .desktop--hidden {
     display: none; } }
 
-.header__questions:before {
-  content: ''; }
-
-@media screen and (min-width: 768px) {
-  .header__questions {
-    color: #3dbAe6;
-    font-size: 40px;
-    margin: 0 auto 30px;
-    position: relative;
-    width: 42%; }
-    .header__questions:before {
-      content: url("../img/concierge_pup.png");
-      position: absolute;
-      left: -96px; }
-    .header__questions:after {
-      content: url("../img/arrow.png");
-      position: absolute;
-      top: -100px;
-      right: -45px; } }
+.header__questions {
+  font-family: "burbank-small-bold", sans-serif; }
+  .header__questions:before {
+    content: ''; }
+  @media screen and (min-width: 768px) {
+    .header__questions {
+      color: #3dbAe6;
+      font-size: 40px;
+      margin: 0 auto 30px;
+      min-width: 454px;
+      position: relative;
+      width: 42%; }
+      .header__questions:before {
+        content: url("../img/concierge_pup.png");
+        position: absolute;
+        left: -96px; }
+      .header__questions:after {
+        content: url("../img/arrow.png");
+        position: absolute;
+        top: -100px;
+        right: -45px; } }
 
 .barkconcierge__section-divider {
   background: #a5a4a4;
@@ -142,9 +149,14 @@ p {
   margin: 30px 0;
   width: 100%; }
 
+@media screen and (min-width: 768px) {
+  .barkconcierge__chat_wrapper {
+    margin-bottom: 160px; } }
+
 .barkconcierge__chat-history {
   margin: 0 auto;
-  max-width: 292px;
+  max-width: 286px;
+  padding-right: 20px;
   width: 100%; }
 
 .barkconcierge__chat {
@@ -154,15 +166,18 @@ p {
       background: #ffffff;
       border: 3px solid #000000;
       display: inline-block;
-      height: 368px;
+      height: 349px;
       width: 293px; } }
 
 .barkconceirge__container {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0 60px;
+  padding: 0 30px;
   text-align: center;
   width: 100%; }
+  @media screen and (min-width: 768px) {
+    .barkconceirge__container {
+      padding: 0 60px; } }
 
 .button {
   color: #ffffff;
@@ -170,6 +185,7 @@ p {
   height: 65px;
   margin: 0 auto 10px;
   max-width: 494px;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   width: 100%; }
@@ -178,20 +194,26 @@ p {
       color: #3dbAe6;
       display: inline-block;
       height: 170px;
-      padding: 20px;
+      margin: 0 auto 20px;
+      padding: 15px 20px 20px;
       vertical-align: middle;
       width: 220px; } }
 
 .button--blue {
   background: #3dbAe6;
-  font-size: 35px;
+  font-size: 25px;
   line-height: 62px; }
+  @media screen and (min-width: 440px) {
+    .button--blue {
+      font-size: 35px; } }
   @media screen and (min-width: 768px) {
     .button--blue {
       background: #f4f4f4;
       font-size: 16px;
       line-height: 18px;
       letter-spacing: 2px; } }
+  .button--blue img {
+    margin: 0 auto 15px; }
   .button--blue span {
     text-transform: uppercase; }
     @media screen and (min-width: 768px) {
@@ -205,15 +227,20 @@ p {
 
 .button--gray {
   background: #b8baba;
-  font-size: 40px;
+  font-size: 25px;
   letter-spacing: 5px;
   line-height: 60px; }
+  @media screen and (min-width: 440px) {
+    .button--gray {
+      font-size: 40px; } }
   @media screen and (min-width: 768px) {
     .button--gray {
       background: #f4f4f4;
       font-size: 16px;
       line-height: 18px;
       letter-spacing: 2px; } }
+  .button--gray img {
+    margin: 0 auto 5px; }
   .button--gray span {
     display: none; }
     @media screen and (min-width: 768px) {
@@ -222,12 +249,31 @@ p {
         display: inline;
         text-transform: none; } }
 
+.button--blue__link {
+  height: 65px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1; }
+  @media screen and (min-width: 768px) {
+    .button--blue__link {
+      display: none; } }
+
+.button--gray__link {
+  height: 65px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1; }
+  @media screen and (min-width: 768px) {
+    .button--gray__link {
+      display: none; } }
+
 .cta__dog-illustrations {
   display: none; }
   @media screen and (min-width: 768px) {
     .cta__dog-illustrations {
-      display: block;
-      margin: 0 auto; } }
+      display: block; } }
 
 .barkconcierge__footer {
   background: #3dbAe6;

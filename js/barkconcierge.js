@@ -1,4 +1,3 @@
-<!--Start of Zopim Live Chat Script-->
 <script type="text/javascript">
 window.$zopim||(function(d,s) {
   var z = $zopim = function(c) {
@@ -53,4 +52,3 @@ $zopim( function() {
   $zopim.livechat.setOnConnected(check);
 });
 </script>
-<!--End of Zopim Live Chat Script-->
