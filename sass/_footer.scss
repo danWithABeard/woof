@@ -1,0 +1,27 @@
+.barkconcierge__footer {
+	background: $blue;
+	height: 50px;
+	margin-top: 40px;
+  position: relative;
+	width: 100%;
+
+	&:before {
+		background: $blue;
+		content: '';
+    height: 46px;
+    position: absolute;
+    top: -23px;
+    transform: skewY(-3deg);
+    width: 100%;
+	}
+
+  img {
+    position: absolute;
+    right: 60px;
+    bottom: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+  	display: none;
+  }
+}

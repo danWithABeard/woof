@@ -1,0 +1,254 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'apercu-medium';
+  src: url("../fonts/apercu_medium-webfont.woff2") format("woff2"), url("../fonts/apercu_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'apercu-regular';
+  src: url("../fonts/apercu_regular-webfont.woff2") format("woff2"), url("../fonts/apercu_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'burbank-small-medium';
+  src: url("../fonts/burbank_small_medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'burbank-small-bold';
+  src: url("../fonts/burbank_small_bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: "apercu-regular", sans-serif; }
+
+.barkconcierge__header {
+  align-items: center;
+  background: #3dbAe6 url("../img/header_tile.jpg") repeat-x center center;
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  padding: 0 60px;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .barkconcierge__header {
+      height: 120px; } }
+  .barkconcierge__header img {
+    width: 100%;
+    max-width: 600px; }
+
+h2 {
+  color: #3dbAe6;
+  font-family: "burbank-small-bold", sans-serif;
+  font-size: 55px;
+  margin-top: 30px; }
+  @media screen and (min-width: 768px) {
+    h2 {
+      color: #000000;
+      font-size: 38px; } }
+
+h3 {
+  font-family: "apercu-medium", sans-serif;
+  font-size: 35px;
+  margin-bottom: 20px; }
+  h3 span {
+    text-transform: uppercase; }
+
+p {
+  font-size: 35px;
+  margin: 25px 0 30px; }
+  @media screen and (min-width: 768px) {
+    p {
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin: 5px 0 25px; } }
+
+@media screen and (min-width: 768px) {
+  .desktop--hidden {
+    display: none; } }
+
+.header__questions:before {
+  content: ''; }
+
+@media screen and (min-width: 768px) {
+  .header__questions {
+    color: #3dbAe6;
+    font-size: 40px;
+    margin: 0 auto 30px;
+    position: relative;
+    width: 42%; }
+    .header__questions:before {
+      content: url("../img/concierge_pup.png");
+      position: absolute;
+      left: -96px; }
+    .header__questions:after {
+      content: url("../img/arrow.png");
+      position: absolute;
+      top: -100px;
+      right: -45px; } }
+
+.barkconcierge__section-divider {
+  background: #a5a4a4;
+  height: 1px;
+  margin: 30px 0;
+  width: 100%; }
+
+.barkconcierge__chat-history {
+  margin: 0 auto;
+  max-width: 292px;
+  width: 100%; }
+
+.barkconcierge__chat {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .barkconcierge__chat {
+      background: #ffffff;
+      border: 3px solid #000000;
+      display: inline-block;
+      height: 368px;
+      width: 293px; } }
+
+.barkconceirge__container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 60px;
+  text-align: center;
+  width: 100%; }
+
+.button {
+  color: #ffffff;
+  font-family: "burbank-small-bold", sans-serif;
+  height: 65px;
+  margin: 0 auto 10px;
+  max-width: 494px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .button {
+      color: #3dbAe6;
+      display: inline-block;
+      height: 170px;
+      padding: 20px;
+      vertical-align: middle;
+      width: 220px; } }
+
+.button--blue {
+  background: #3dbAe6;
+  font-size: 35px;
+  line-height: 62px; }
+  @media screen and (min-width: 768px) {
+    .button--blue {
+      background: #f4f4f4;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 2px; } }
+  .button--blue span {
+    text-transform: uppercase; }
+    @media screen and (min-width: 768px) {
+      .button--blue span {
+        text-transform: none; } }
+    .button--blue span:before {
+      content: 'or try it out '; }
+      @media screen and (min-width: 768px) {
+        .button--blue span:before {
+          content: 'or chat '; } }
+
+.button--gray {
+  background: #b8baba;
+  font-size: 40px;
+  letter-spacing: 5px;
+  line-height: 60px; }
+  @media screen and (min-width: 768px) {
+    .button--gray {
+      background: #f4f4f4;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 2px; } }
+  .button--gray span {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .button--gray span {
+        color: #000000;
+        display: inline;
+        text-transform: none; } }
+
+.cta__dog-illustrations {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .cta__dog-illustrations {
+      display: block;
+      margin: 0 auto; } }
+
+.barkconcierge__footer {
+  background: #3dbAe6;
+  height: 50px;
+  margin-top: 40px;
+  position: relative;
+  width: 100%; }
+  .barkconcierge__footer:before {
+    background: #3dbAe6;
+    content: '';
+    height: 46px;
+    position: absolute;
+    top: -23px;
+    transform: skewY(-3deg);
+    width: 100%; }
+  .barkconcierge__footer img {
+    position: absolute;
+    right: 60px;
+    bottom: 40px; }
+  @media screen and (min-width: 768px) {
+    .barkconcierge__footer {
+      display: none; } }
+
+/*# sourceMappingURL=barkconcierge.css.map */

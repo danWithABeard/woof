@@ -1,0 +1,17 @@
+{
+  "name": "barkconcierge",
+  "version": "1.0.0",
+  "description": "BarkConcierge landing page for BarkBox",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "BarkBox",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-sass": "^1.2.1",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}

@@ -1,0 +1,85 @@
+%button {
+	color: $white;
+	font-family: $burbank-bold;
+	height: 65px;
+  margin: 0 auto 10px;
+  max-width: 494px;
+  text-align: center;
+	text-transform: uppercase;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+  	color: $blue;
+  	display: inline-block;
+  	height: 170px;
+    padding: 20px;
+  	vertical-align: middle;
+  	width: 220px;
+  }
+}
+
+.button {
+	@extend %button;
+
+	&--blue {
+    background: $blue;
+    font-size: 35px;
+    line-height: 62px;
+
+    @media screen and (min-width: 768px) {
+    	background: $light-gray;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 2px;
+    }
+
+    span {
+      text-transform: uppercase;
+
+      @media screen and (min-width: 768px) {
+        text-transform: none;
+      }
+
+      &:before {
+        content: 'or try it out ';
+
+        @media screen and (min-width: 768px) {
+          content: 'or chat ';
+        }
+      }
+    }
+	}
+
+	&--gray {
+    background: $gray;
+    font-size: 40px;
+    letter-spacing: 5px;
+    line-height: 60px;
+
+    @media screen and (min-width: 768px) {
+    	background: $light-gray;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 2px;
+    }
+
+    span {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        color: $black;
+        display: inline;
+        text-transform: none;
+      }
+    }
+	}
+}
+
+.cta__dog-illustrations {
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: block;
+		margin: 0 auto;
+	}
+}
