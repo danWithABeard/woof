@@ -52,13 +52,15 @@ h2 {
 
 p {
   font-size: 35px;
+  line-height: 35px;
   margin: 25px auto 30px;
   max-width: 500px;
 
 	@media screen and (min-width:768px) {
 		font-size: 20px;
 	  letter-spacing: 2px;
+    line-height: 25px;
 	  margin: 5px auto 25px;
-	  max-width: none;
+	  max-width: 650px;
   }
 }
