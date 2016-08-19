@@ -1,4 +1,4 @@
-%button {
+.button {
 	color: $white;
 	font-family: $burbank-bold;
 	height: 65px;
@@ -20,77 +20,41 @@
   }
 }
 
-.button {
-	@extend %button;
+.button--blue {
+  background: $blue;
+  font-size: 25px;
+  line-height: 62px;
 
-	&--blue {
-    background: $blue;
-    font-size: 25px;
-    line-height: 62px;
+  @media screen and (min-width: 440px) {
+    font-size: 35px;
+  }
 
-    @media screen and (min-width: 440px) {
-      font-size: 35px;
-    }
+  @media screen and (min-width: 768px) {
+  	background: $light-gray;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
 
-    @media screen and (min-width: 768px) {
-    	background: $light-gray;
-      font-size: 16px;
-      line-height: 18px;
-      letter-spacing: 2px;
-    }
+  img {
+    margin: 0 auto 15px;
+  }
 
-    img {
-      margin: 0 auto 15px;
-    }
-
-    span {
-      text-transform: uppercase;
-
-      @media screen and (min-width: 768px) {
-        text-transform: none;
-      }
-
-      &:before {
-        content: 'or try it out ';
-
-        @media screen and (min-width: 768px) {
-          content: 'or chat ';
-        }
-      }
-    }
-	}
-
-	&--gray {
-    background: $gray;
-    font-size: 25px;
-    letter-spacing: 5px;
-    line-height: 60px;
-
-    @media screen and (min-width: 440px) {
-      font-size: 40px;
-    }
+  span {
+    text-transform: uppercase;
 
     @media screen and (min-width: 768px) {
-    	background: $light-gray;
-      font-size: 16px;
-      line-height: 18px;
-      letter-spacing: 2px;
+      text-transform: none;
     }
 
-    img {
-      margin: 0 auto 5px;
-    }
-
-    span {
-      display: none;
+    &:before {
+      content: 'or try it out ';
 
       @media screen and (min-width: 768px) {
-        color: $black;
-        display: inline;
-        text-transform: none;
+        content: 'or chat ';
       }
     }
-	}
+  }
 }
 
 .button--blue__link {
@@ -102,6 +66,38 @@
 
   @media screen and (min-width: 768px) {
     display: none;
+  }
+}
+
+.button--gray {
+  background: $gray;
+  font-size: 25px;
+  letter-spacing: 5px;
+  line-height: 60px;
+
+  @media screen and (min-width: 440px) {
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+  	background: $light-gray;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  img {
+    margin: 0 auto 5px;
+  }
+
+  span {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      color: $black;
+      display: inline;
+      text-transform: none;
+    }
   }
 }
 

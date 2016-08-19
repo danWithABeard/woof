@@ -9,3 +9,16 @@
 	  padding: 0 60px;
 	}
 }
+
+.desktop--hidden {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.barkconcierge__section-divider {
+  background: $dark-gray;
+  height: 1px;
+  margin: 30px 0;
+  width: 100%;
+}
